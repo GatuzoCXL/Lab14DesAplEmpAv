@@ -1,0 +1,47 @@
+## Build results
+**/bin/
+**/obj/
+
+## Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider specific
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+
+## Publish profiles
+**/PublishProfiles/
+*.pubxml
+*.publishproj
+
+## Entity Framework Migrations
+**/Migrations/
+
+## Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+*.swp
+*~
+
+## OS files
+.DS_Store
+Thumbs.db
