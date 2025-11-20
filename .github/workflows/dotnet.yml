@@ -1,0 +1,31 @@
+name: Build and Deploy .NET 9 App
+
+on:
+  push:
+    branches: [ "main" ] # Se ejecuta al subir cambios a main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Set up .NET 9
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x' # <-- Aquí está el cambio importante para ti
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build application
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Publish application
+      run: dotnet publish --configuration Release --no-build --output ./published
+
+    # Este paso es opcional y solo demostrativo según el lab
+    # - name: List files (Verificación)
+    #   run: ls -R ./published-
